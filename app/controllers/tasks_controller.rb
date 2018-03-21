@@ -26,7 +26,7 @@ class TasksController < ApplicationController
     def update
         task = Task.find(params[:id])
         task.update(params[:task].permit(:title, :due, :priority, :is_complete, :category))
-        redirect_to tasks_url
+            redirect_to tasks_url
 
     end
     
